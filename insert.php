@@ -1,3 +1,16 @@
+<?php
+require_once "database.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $eesnimi = $_POST["eesnimi"];
+    $perenimi = $_POST["perenimi"];
+    $otsus = $_POST["otsus"];
+
+    // Insert hääletaja into the database
+    LisaHaaletaja($eesnimi, $perenimi, $otsus);
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
