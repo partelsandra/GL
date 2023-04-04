@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "viigisaluleena_muutja";
-$password = "-uC9RL4)RCyL";
-$dbname = "viigisaluleena_haaletussysteem";
+$username = "partelsandra_abul1";
+$password = "qwerty12345qwerty";
+$dbname = "partelsandra_HARJUTUS";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
