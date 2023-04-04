@@ -1,16 +1,3 @@
-<?php
-require_once "database.php";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $eesnimi = $_POST["eesnimi"];
-    $perenimi = $_POST["perenimi"];
-    $otsus = $_POST["otsus"];
-
-    // Insert hääletaja into the database
-    LisaHaaletaja($eesnimi, $perenimi, $otsus);
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,18 +6,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 	<h1>Hääletus</h1>
-	<form action="insert.php" method="post">
+	<form action="process.php" method="post">
 		<label for="eesnimi">Eesnimi:</label>
 		<input type="text" id="eesnimi" name="eesnimi" required><br>
 	<label for="perenimi">Perenimi:</label>
 	<input type="text" id="perenimi" name="perenimi" required><br>
-
 	<label for="otsus">Hääletuse otsus:</label>
 	<select id="otsus" name="otsus" required>
 		<option value="poolt">Poolt</option>
 		<option value="vastu">Vastu</option>
 	</select>
-	<button type="submit">Hääleta</button>
+	<input type="submit" name="save" value="otsus">
 </form>
 </body>
 </html>
